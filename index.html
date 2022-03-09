@@ -46,6 +46,7 @@
           </nav>
     </header>
     <main>
+        <h2 class="text-center text-info my-5">Email and Password Validaton</h2>
         <section class="container w-75">
 
             <div class="col-auto">
@@ -59,14 +60,18 @@
             <h5 id="correct-email" class="text-center d-none text-success">Your email is valid.</h5>
             <div class="g-3 align-items-center">
                 <div class="col-auto">
-                  <label for="inputPassword6" class="text-primary col-form-label">Password</label>
+                  <label for="inputPassword" class="text-primary col-form-label">Password</label>
                 </div>
-                <div class="col-auto">
-                  <input type="password" id="inputPassword6" placeholder="password" class="form-control" aria-describedby="passwordHelpInline">
+                <div class="input-group mb-3">
+                  <input type="password" id="inputPassword" placeholder="password" class="form-control" aria-describedby="passwordHelpInline">
+                  <button onclick="checkPassword()" class="btn btn-outline-secondary" type="button" id="button-addon2">Check</button>
+
                 </div>
+                <h5 id="worng-password" class="text-center d-none text-danger">Please provide a valid password.</h5>
+                <h5 id="correct-password" class="text-center d-none text-success">Your password is strong.</h5>
                 <div class="col-auto">
                   <span id="passwordHelpInline" class="form-text">
-                    Must be 8-20 characters long.
+                    Must be 8 letter with at least a symble, upper and lower case letters and a number.
                   </span>
                 </div>
               </div>

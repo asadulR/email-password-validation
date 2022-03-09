@@ -23,3 +23,33 @@ const checkEmail = () => {
     
     emailField.value = '';
 }
+
+
+const worngPassError = document.getElementById('worng-password');
+const rightpass = document.getElementById('correct-password');
+
+const checkPassword =() =>
+{
+    const passField = document.getElementById('inputPassword');
+    const password = passField.value;
+
+
+    const passwordFilter = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    
+
+
+    if(!passwordFilter.test(password)){
+        // alert('please provide a valid password.')
+        
+        worngPassError.classList.remove('d-none');
+        rightpass.classList.add('d-none')
+    }
+    else if(passwordFilter.test(password)){
+        rightpass.classList.remove('d-none')
+        worngPassError.classList.add('d-none');
+
+    }
+
+
+    passField.value = '';
+}
