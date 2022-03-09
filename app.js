@@ -1,0 +1,3 @@
+const checkEmail = () => {
+    alert('ol')
+}
